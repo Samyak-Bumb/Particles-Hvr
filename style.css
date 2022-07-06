@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+:root {
+  --dark: #010101;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--dark);
+  /* transition: all .3s ease; */
+  overflow: hidden;
+}
+
+span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: #4dabf7;
+}
+span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  animation: ani 2s linear infinite;
+}
+@keyframes ani {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(300px);
+  }
+}
